@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc Tubo x Conexoes</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="bg-primary text-white text-center py-3 mb-4">
+        <h1>Calc Tubo x Conexoes</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <form>
+                    <div class="form-group">
+                        <label for="tubos">Total de Tubos:</label>
+                        <input type="text" class="form-control" name="tubos" id="tubos" placeholder="R$"
+                            oninput="formatarMoeda(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="tubos-de-100">Total de Tubos de 100:</label>
+                        <input type="text" class="form-control" name="tubos-de-100" id="tubos-de-100" placeholder="R$"
+                            oninput="formatarMoeda(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="nao-tubos">Não Tubos:</label>
+                        <input type="text" class="form-control" name="nao-tubos" id="nao-tubos" placeholder="R$"
+                            oninput="formatarMoeda(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="cpvc">CPVC:</label>
+                        <input type="text" class="form-control" name="cpvc" id="cpvc" placeholder="R$"
+                            oninput="formatarMoeda(this)">
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary" onclick="calcular()">Calcular</button>
+                        <button type="button" class="btn btn-secondary" onclick="limpar()">Limpar</button>
+                    </div>
+                </form>
+
+                <div id="resultado" class="mt-3"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modalResultado" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="modalResultadoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Aqui será inserido o conteúdo da modal -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-light text-center py-3 mt-4">
+        <p>&copy; 2024 Calc Tubo x Conexoes</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
